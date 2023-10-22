@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travel Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scripts.js">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+        .destination-item {
+            border: 2px solid teal;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .read-more-btn {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .intro-section {
+            text-align: center;
+            padding: 20px;
+            background-color: teal;
+            color: #fff;
+        }
+    </style>
+       <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("destination-card");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length - 2) {
+                slideIndex = 0;
+            }
+            slides[slideIndex].style.display = "block";
+            slides[slideIndex + 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Travel Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section" style="padding: 40px ;font-size: 22px; background-color: #fff;">
+        <h2 style="color: teal; text-align: center;">About Travel Explorer</h2>
+        <p style="color: teal; text-align: center;">Welcome to Travel Explorer, your gateway to a world of unforgettable adventures and awe-inspiring destinations. We are passionate about making travel dreams a reality, and our mission is to provide you with the tools and inspiration to embark on transformative journeys across the globe.</p>
+        <p style="color: teal; text-align: center;">At Travel Explorer, we believe that travel is more than just visiting places; it's about immersing yourself in diverse cultures, connecting with local communities, and creating lasting memories. Our platform is designed to curate a seamless travel experience, offering a comprehensive guide to the world's most captivating destinations, hidden gems, and cultural hotspots.</p>
+        <p style="color: teal; text-align: center;">Whether you're seeking thrilling adventures, indulgent getaways, or cultural explorations, Travel Explorer provides expert recommendations, insider tips, and immersive travel vlogs that bring destinations to life. Our team of seasoned travelers and storytellers is dedicated to sharing their firsthand experiences, insights, and recommendations, ensuring that your next journey is nothing short of extraordinary.</p>
+        <p style="color: teal; text-align: center;">Join us on a quest to uncover the world's wonders, unravel the mysteries of uncharted territories, and embrace the beauty of cultural diversity. Let Travel Explorer be your trusted companion, guiding you on a path of discovery and enriching experiences that will leave an indelible mark on your soul.</p>
+    </section>
+    
+    
+
+    <section class="destination-list" style="padding-top: 80px;">
+        <h2 style="color: teal; text-align: center;">Discover New Destinations</h2>
+        <div class="destination-item" id="destination3">
+            <img src="Day08_Jaisalmer_GrandIndiaTour_01_compressed_20180226142515.jpg" alt="Destination 3" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <h3 style="color: teal; text-align: center;">Jaisalmer</h3>
+            <p style="color: teal;">Explore the breathtaking beauty of Jaisalmer, a paradise nestled in the lap of nature. With its serene landscapes and enchanting views, it offers a perfect retreat for those seeking solace amidst the wonders of the natural world. Don't miss the opportunity to embark on thrilling treks through the verdant trails and witness the diverse flora and fauna that call this destination home. Additionally, indulge in the local delicacies and experience the warm hospitality of the welcoming locals who take pride in preserving the pristine environment and cultural heritage of this enchanting destination.</p>
+            <button class="read-more-btn" onclick="showMore('destination3')">Read More</button>
+            <p id="more-destination3" style="display: none; color: teal;">Discover the hidden gems of Jaisalmer that are sure to leave you mesmerized. Engage in adrenaline-pumping activities such as river rafting, paragliding, and rock climbing, providing an unforgettable experience for adventure seekers. As the day unfolds, witness the spectacular sunsets that paint the sky in vibrant hues, creating a picturesque setting for moments of tranquility and reflection. Immerse yourself in the local culture by participating in traditional festivities and ceremonies that showcase the rich heritage and deep-rooted customs of the region. Every aspect of Jaisalmer is a testament to the wonders of nature and the enduring spirit of the people who call it home.</p>
+        </div>
+        <div class="destination-item" id="destination4">
+            <img src="Best-Travel-Blogs-Featured-Image-1170x677.webp" alt="Destination 4" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+            <h3 style="color: teal; text-align: center;">Rajasthan</h3>
+            <p style="color: teal;">Indulge in the rich history and cultural heritage of this place. From ancient architectural marvels to vibrant local traditions, this place offers a captivating journey through time. Experience the warmth of the local community and immerse yourself in the festivities that reflect the spirit of this culturally rich destination. Every corner tells a story that is sure to leave a lasting impression on your travel memoirs. As you stroll through the bustling streets, marvel at the intricate craftsmanship of the historical monuments that stand as testaments to the glorious past of Rajasthan. Engage with the knowledgeable locals who are eager to share the tales and legends that have shaped the vibrant tapestry of this extraordinary place.</p>
+            <button class="read-more-btn" onclick="showMore('destination4')">Read More</button>
+            <p id="more-destination4" style="display: none; color: teal;">Delve deeper into the cultural mosaic of Rajasthan by exploring its vibrant markets and indulging in the aromatic flavors of the local cuisine. Allow your senses to be tantalized by the melange of spices and ingredients that create a symphony of taste unique to this destination. Engage in interactive workshops and demonstrations that offer insights into the traditional arts and crafts that have been passed down through generations. Immerse yourself in the rhythmic beats of traditional music and dance performances that encapsulate the spirit and soul of Rajasthan. Every moment spent in this cultural haven is an invitation to delve into the essence of its identity and create lasting memories of a truly immersive travel experience.</p>
+        </div>
+     
+    </section>
+  <!-- Scroll Up Button -->
+  <div id="scrollUpBtn">
+    <span>&#8593;</span>
+</div>   
+    <footer>
+        <p>&copy; 2023 Travel Explorer</p>
+    </footer>
+
+    <script>
+        function showMore(destinationId) {
+            var moreContent = document.getElementById('more-' + destinationId);
+            var button = document.getElementById(destinationId).querySelector('.read-more-btn');
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+                button.textContent = 'Show Less';
+            } else {
+                moreContent.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+    <script>
+        // Add the event listener for scrolling
+    window.addEventListener('scroll', function() {
+        var scrollUpBtn = document.getElementById('scrollUpBtn');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollUpBtn.classList.add('active');
+        } else {
+            scrollUpBtn.classList.remove('active');
+        }
+    });
+    
+    // Add the click event for scrolling to the top
+    document.getElementById('scrollUpBtn').addEventListener('click', function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+    </script>
+</body>
+</html>

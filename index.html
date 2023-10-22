@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scripts.js">
+    
+    <style>
+        #scrollUpBtn {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background-color: teal;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #scrollUpBtn.active {
+        display: block;
+    }
+       /* Add the following media query to your existing styles.css file */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em;
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Make the website stick to left and right sides */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust the content width */
+.video-section,
+.hero,
+.destinations,
+.about-section,
+.destination-list,
+.form-container,
+.blog-post,
+.comment-section {
+    width: 90%;
+    margin: auto;
+}
+
+/* Make the header stick to the left and right sides */
+header {
+    width: 100%;
+}
+
+/* Adjust the video section to fit the screen */
+.video-section {
+    width: 100%;
+}
+
+/* Adjust the destination items to fit the screen */
+.destination-item {
+    width: 100%;
+}
+
+/* Adjust the blog post width to fit the screen */
+.blog-post {
+    width: 100%;
+}
+
+/* Add the following styles to adjust the form container */
+.form-container {
+    width: 100%;
+}
+
+/* Make the website responsive for mobile view */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .blog-post {
+        width: 90%;
+    }
+
+    .comment-section textarea {
+        width: 90%;
+    }
+}
+
+/* Adjust the footer width */
+footer {
+    width: 100%;
+}
+
+ 
+</style>
+</head>
+<body>
+    <header>
+        <h1>Travel Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!-- Add the video section below the header -->
+        <section class="video-section">
+            <video autoplay loop muted class="homepage-video">
+                <source src="home.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="hero">
+            <h2 style="color: teal;font-size: 30px;text-decoration: underline solid #15c5aa; ">Explore the World with Us</h2>
+            <p style="color: teal;font-size:20px;">Plan your next adventure with our travel guides and recommendations.</p>
+        
+        <section class="destinations">
+            <h2 style="color: teal; font-size: 20px;"><img src="travel_826070.png" style="height: 30px; width: 30px;"/> Popular Destinations in India</h2>
+
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <img src="jaipur.jpg" alt="Jaipur, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Jaipur</h3>
+                <p style="color: teal; font-size: 16px;">Discover the pink city of Jaipur with its majestic palaces, vibrant culture, and rich history.</p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="goa.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Goa</h3>
+                <p style="color: teal; font-size: 16px;">Experience the beaches and nightlife of Goa, known for its stunning coastlines, seafood, and Portuguese heritage.</p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="Agra.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Agra, Uttar Pradesh</h3>
+                <p style="color: teal; font-size: 16px;">Home to the iconic Taj Mahal, Agra offers a glimpse into the rich Mughal heritage and architecture.</p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="mumbai-main-data.webp" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Mumbai, Maharashtra</h3>
+                <p style="color: teal; font-size: 16px;">Known as the city of dreams, Mumbai is a bustling metropolis offering a vibrant mix of culture, food, and entertainment.</p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="leh-ladakh-.avif" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Leh-Ladakh, Jammu and Kashmir</h3>
+                <p style="color: teal; font-size: 16px;">A paradise for adventure enthusiasts, Leh-Ladakh boasts breathtaking landscapes, serene monasteries, and thrilling trekking trails.
+                </p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="kerala.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Kochi, Kerala</h3>
+                <p style="color: teal; font-size: 16px;">With its picturesque backwaters, spice markets, and colonial architecture, Kochi offers a unique blend of history and natural beauty.
+                </p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="Darjeeling.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Darjeeling, West Bengal</h3>
+                <p style="color: teal; font-size: 16px;"> Famous for its tea gardens and panoramic views of the Himalayas, Darjeeling is a serene hill station that attracts nature lovers and trekkers.
+
+                </p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="udaipur.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Udaipur, Rajasthan</h3>
+                <p style="color: teal; font-size: 16px;"> Known as the 'City of Lakes' and 'Venice of the East,' Udaipur enthralls visitors with its opulent palaces, shimmering lakes, and vibrant bazaars.
+
+                </p>
+            </div>
+
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="Varanasi.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Varanasi, Uttar Pradesh</h3>
+                <p style="color: teal; font-size: 16px;"> Varanasi, situated on the banks of the holy river Ganges, is one of the oldest living cities in the world, renowned for its spiritual and cultural significance.
+
+                </p>
+            </div>
+
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="shimla.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;"> Shimla, Himachal Pradesh</h3>
+                <p style="color: teal; font-size: 16px;"> A beloved hill station, Shimla offers panoramic views of the Himalayas, colonial architecture, and a pleasant climate, making it a popular retreat for travelers.
+                </p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="Mysore.webp" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;"> Mysore, Karnataka</h3>
+                <p style="color: teal; font-size: 16px;">   Mysore is renowned for its grand Mysore Palace, vibrant Dasara festival, intricate silk sarees, and rich cultural heritage.
+                </p>
+            </div>
+            <div class="destination-card" style="border: 2px solid teal; background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <img src="Pondicherry.jpg" alt="Goa, India" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3 style="color: teal; font-size: 26px; margin-bottom: 10px;">Puducherry (Pondicherry)</h3>
+                <p style="color: teal; font-size: 16px;"> With its French colonial architecture, tranquil beaches, and spiritual aura, Puducherry is a charming coastal town that reflects a unique blend of cultures.
+                </p>
+            </div>
+            <!-- Scroll Up Button -->
+            <div id="scrollUpBtn">
+                <span>&#8593;</span>
+            </div>   
+        </section>
+        
+   </section>
+   <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("destination-card");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length - 2) {
+            slideIndex = 0;
+        }
+        slides[slideIndex].style.display = "block";
+        slides[slideIndex + 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+</script>
+ 
+<script>
+    // Add the event listener for scrolling
+window.addEventListener('scroll', function() {
+    var scrollUpBtn = document.getElementById('scrollUpBtn');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollUpBtn.classList.add('active');
+    } else {
+        scrollUpBtn.classList.remove('active');
+    }
+});
+
+// Add the click event for scrolling to the top
+document.getElementById('scrollUpBtn').addEventListener('click', function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+</script>
+    <footer>
+        <p>&copy; 2023 Travel Explorer</p>
+    </footer>
+</body>
+</html>
