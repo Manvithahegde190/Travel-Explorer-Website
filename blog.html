@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your existing styles */
+        button {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+       button:hover {
+            background-color: #008080;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Travel Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br><br>
+    <br>
+    <section class="blog-section" id="blogSection">
+    </section>
+<br><br>
+    <div class="form-container">
+        <h2>Create a New Blog Post</h2>
+        <input type="text" id="blogTitle" placeholder="Enter Title">
+        <input type="text" id="authorName" placeholder="Your Name">
+        <input type="text" id="categories" placeholder="Categories (comma-separated)">
+        <input type="text" id="tags" placeholder="Tags (comma-separated)">
+        <textarea id="blogContent" placeholder="Enter Content"></textarea>
+        <input type="file" id="blogImage" accept="image/*">
+        <input type="button" class="teal-button" style="margin-bottom: 10px;" value="Save Post" onclick="savePost()">
+    </div>
+  
+  <!-- Scroll Up Button -->
+  <div id="scrollUpBtn">
+    <span>&#8593;</span>
+</div>  
+    <script>
+        // Add the event listener for scrolling
+    window.addEventListener('scroll', function() {
+        var scrollUpBtn = document.getElementById('scrollUpBtn');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollUpBtn.classList.add('active');
+        } else {
+            scrollUpBtn.classList.remove('active');
+        }
+    });
+    
+    // Add the click event for scrolling to the top
+    document.getElementById('scrollUpBtn').addEventListener('click', function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+    </script>
+    <footer>
+        <p>&copy; 2023 Travel Blog</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

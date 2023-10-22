@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travel Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scripts.js">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+       
+        .destination-item {
+            border: 2px solid teal;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .read-more-btn {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="destination-list" style="padding-top: 80px;">
+        <h2 style="color: teal;">Our Destinations</h2>
+        <div class="destination-item" id="destination3">
+            <img src="destination3.jpg" alt="Destination 3">
+            <h3 style="color: teal;">Kerala</h3>
+            <p style="color: teal;">Explore the breathtaking beauty of Kerala , a paradise nestled in the lap of nature. With its serene landscapes and enchanting views, it offers a perfect retreat for those seeking solace amidst the wonders of the natural world. From cascading waterfalls to lush green forests, this destination is a haven for adventure enthusiasts and nature lovers.</p>
+            <p id="more-destination3" style="display: none; color: teal;">Discover the hidden gems of kerala that are sure to leave you mesmerized. Engage in adrenaline-pumping activities such as river rafting, paragliding, and rock climbing, providing an unforgettable experience for adventure seekers. As the day unfolds, witness the spectacular sunsets that paint the sky in vibrant hues, creating a picturesque setting for moments of tranquility and reflection. Immerse yourself in the local culture by participating in traditional festivities and ceremonies that showcase the rich heritage and deep-rooted customs of the region. Every aspect of this Destination is a testament to the wonders of nature and the enduring spirit of the people who call it home.</p>
+            <button class="read-more-btn" onclick="showMore('destination3')">Read More</button>
+    
+        </div>
+     
+        <div class="destination-item" id="destination4">
+            <img src="destination4.jpg" alt="Destination 4">
+            <h3 style="color: teal;">Mount Kailash</h3>
+            <p style="color: teal;">Indulge in the rich history and cultural heritage of Mount Kailash . From ancient architectural marvels to vibrant local traditions, this place offers a captivating journey through time. Experience the warmth of the local community and immerse yourself in the festivities that reflect the spirit of this culturally rich destination. Every corner tells a story that is sure to leave a lasting impression on your travel memoirs.</p>
+            <p id="more-destination4" style="display: none; color: teal;">Delve deeper into the cultural mosaic of mountains by exploring its vibrant markets and indulging in the aromatic flavors of the local cuisine. Allow your senses to be tantalized by the melange of spices and ingredients that create a symphony of taste unique to this destination. Engage in interactive workshops and demonstrations that offer insights into the traditional arts and crafts that have been passed down through generations. Immerse yourself in the rhythmic beats of traditional music and dance performances that encapsulate the spirit and soul of Destination 4. Every moment spent in this cultural haven is an invitation to delve into the essence of its identity and create lasting memories of a truly immersive travel experience.</p>
+            <button class="read-more-btn" onclick="showMore('destination4')">Read More</button>
+    </div>
+        </div>
+        <!-- Add more destination items as needed -->
+    </section>
+      <!-- Scroll Up Button -->
+  <div id="scrollUpBtn">
+    <span>&#8593;</span>
+</div> 
+<script>
+    // Add the event listener for scrolling
+window.addEventListener('scroll', function() {
+    var scrollUpBtn = document.getElementById('scrollUpBtn');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollUpBtn.classList.add('active');
+    } else {
+        scrollUpBtn.classList.remove('active');
+    }
+});
+
+// Add the click event for scrolling to the top
+document.getElementById('scrollUpBtn').addEventListener('click', function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+</script>
+    <footer>
+        <p>&copy; 2023 Travel Explorer</p>
+    </footer>
+    
+    <script>
+        function showMore(destinationId) {
+            var moreContent = document.getElementById('more-' + destinationId);
+            var button = document.getElementById(destinationId).querySelector('.read-more-btn');
+            if (moreContent.style.display === 'none') {
+                moreContent.style.display = 'block';
+                button.textContent = 'Show Less';
+            } else {
+                moreContent.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</body>
+</html>
